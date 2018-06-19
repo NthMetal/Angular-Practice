@@ -1,0 +1,30 @@
+<!--<h2>{{ hero.width | uppercase }} Details</h2>
+<div><span>height: </span>{{hero.height}}</div>
+<div><span>width: </span>{{hero.width}}</div>
+<div>
+    <label>width:
+      <input [(ngModel)]="hero.width" placeholder="width">
+    </label>
+</div>
+
+<h3 *ngIf="wi==16">You won!</h3>
+
+<div *ngFor="let i of items">
+    <span *ngFor="let j of i">
+        {{j}}
+    </span>
+</div>-->
+
+<div>
+  <table class="board">
+    <tr *ngFor="let i of items; let k = index">
+      <td *ngFor="let j of i; let l = index">
+        <i (click)="placePiece(k, l)"> <!-- $event -->
+            <img *ngIf="j==0" src="http://luis-perez.s3-us-west-2.amazonaws.com/angularjs-minesweeper-game/empty.png" />
+        </i>
+        <img *ngIf="j==1" src="https://i.imgur.com/HT4jRX8.png" />
+        <img *ngIf="j==2" src="https://i.imgur.com/TakDibr.png" />
+      </td>
+    </tr>
+  </table>
+</div> 

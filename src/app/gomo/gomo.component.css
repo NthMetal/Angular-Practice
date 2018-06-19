@@ -1,0 +1,8 @@
+.board{
+  line-height: 0;
+  border-spacing: 0;
+}
+
+.board td {
+  padding: 0
+}
